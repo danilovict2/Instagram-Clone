@@ -20,10 +20,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <div><img src="/images/Instagram_logo.png" alt="logo"></div>
-                    <div>Instagram</div>
-                    
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                    <div><img src="/images/Instagram_logo.png" style="height: 18px; padding-right: 1ch; border-right: 1px solid"></div>
+                    <div style="padding-left: 1ch; padding-top: 2.5px">Instagram</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
