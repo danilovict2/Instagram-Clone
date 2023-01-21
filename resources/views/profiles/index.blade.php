@@ -7,15 +7,18 @@
             <img src="/images/Instagram_logo.png" class="rounded-circle" style="height: 170px">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>{{ $user->username }}</h1></div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add new post</a>
+            </div>
             <div class="d-flex">
                 <div style="padding-right: 25px"><strong>153</strong> posts</div>
                 <div style="padding-right: 25px"><strong>23k</strong> followers</div>
                 <div style="padding-right: 25px"><strong>212</strong> following</div>
             </div>
-            <div class="pt-4" style="font-weight: bold">freecodecamp.org</div>
-            <div>We're a global community of millions of people learning to code together.LearnToCodeRPG: https://www.freecodecamp.org/news/learn-to-code-rpg/</div>
-            <div><a href="#">www.freecodecamp.org</a></div>
+            <div class="pt-4" style="font-weight: bold">{{ $user->profile->title }}</div>
+            <div>{{$user->profile->description}}</div>
+            <div><a href="#">{{$user->profile->url}}</a></div>
         </div>
         <div class="row pt-5">
             <div class="col-4">
