@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->timestamps();
 
-            //Constraints
+            //Constraints and indexes
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->index('user_id');
         });
