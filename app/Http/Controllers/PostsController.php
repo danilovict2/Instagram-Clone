@@ -13,7 +13,6 @@ class PostsController extends Controller
     }
 
     public function create(){
-
         return view('posts.create');
     }
 
@@ -37,7 +36,6 @@ class PostsController extends Controller
 
     public function show(\App\Models\Post $post){
 
-
-        dd($post);
+        return view('posts.show', compact('post'));
     }
 }
