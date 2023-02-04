@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn btn-primary" style="margin-left: 10%" @click = "followUser">Follow</button>
+        <button class="btn btn-primary" style="margin-left: 10%" @click = "followUser" v-text="buttonText"></button>
     </div>
 </template>
 
@@ -14,10 +14,26 @@ import axios from 'axios';
         methods:{
             followUser(){
                 axios.post('/follow/' + this.user_id).then(response => {
-                    alert(response.data);
+                    this.status = !this.status;
+                    console.log(response.data);
+                })
+                .catch(errors => {
+                    if(errors.response.status == 401){
+                        window.location = '/login';
+                    }
                 });
             }
         },
-        props: ['user_id']
+        props: ['user_id','follows'],
+        data: function(){
+            return {
+                status:this.follows,
+            }
+        },
+        computed:{
+            buttonText(){
+                return (this.status)? "Unfollow":"Follow";
+            }
+        }
     }
 </script>
