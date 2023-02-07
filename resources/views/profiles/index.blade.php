@@ -20,9 +20,9 @@
                     <a href="/profile/{{ $user->id }}/edit">Edit your profile</a>
                 @endcan
                 <div class="d-flex">
-                    <div style="padding-right: 25px"><strong>{{ $user->posts->count() }}</strong> posts</div>
-                    <div style="padding-right: 25px"><strong>{{ $user->profile->followers->count() }}</strong> followers</div>
-                    <div style="padding-right: 25px"><strong>{{ $user->following->count() }}</strong> following</div>
+                    <div style="padding-right: 25px"><strong>{{ $postsCount }}</strong> posts</div>
+                    <div style="padding-right: 25px"><strong>{{ $followersCount }}</strong> followers</div>
+                    <div style="padding-right: 25px"><strong>{{ $followingCount }}</strong> following</div>
                 </div>
                 <div class="pt-4" style="font-weight: bold">{{ $user->profile->title }}</div>
                 <div>{{ $user->profile->description }}</div>
